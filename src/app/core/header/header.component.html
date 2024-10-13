@@ -1,0 +1,21 @@
+<header>
+    <mat-toolbar>
+        <div class="name">
+            <a mat-icon-button [routerLink]="['/welcome']" aria-label="Home icon">
+                <mat-icon>handshake</mat-icon>
+            </a>
+            <span>{{ name }}</span>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <!-- ToDo Add links to ids-->
+                    <a mat-button>{{ navItem1 }}</a>
+                </li>
+                <li>
+                    <a mat-button>{{ navItem2 }}</a>
+                </li>
+            </ul>
+        </nav>
+    </mat-toolbar>
+</header>
