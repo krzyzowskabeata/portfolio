@@ -1,0 +1,11 @@
+@import '../../assets/variables.scss';
+
+.container {   
+    @include background(url('../../assets/pic-theme.JPG'));
+    width: 100vw;
+    height: calc(100vh - 64px); //ToDo ?!
+
+    @include xl {
+        width: 50vw;
+    }
+}
