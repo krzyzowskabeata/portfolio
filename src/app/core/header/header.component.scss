@@ -1,16 +1,10 @@
-header mat-toolbar { // ToDo MIXIN & MOBILE FIRST
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+@import '../../../assets/variables';
+
+header mat-toolbar { // ToDo MOBILE FIRST
+    @include flex(space-between, center);
 
     .name {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        align-items: center;
+        @include flex(space-between, center, row, nowrap);
 
         span {
             font-size: .75em;
@@ -21,12 +15,8 @@ header mat-toolbar { // ToDo MIXIN & MOBILE FIRST
     }
 
     nav ul {
+        @include flex(space-between, center, row, nowrap);
         list-style-type: none;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        align-items: center;
         margin: 0;
     }
 }
