@@ -1,0 +1,22 @@
+@import '../../../assets/variables';
+
+header mat-toolbar { // ToDo MOBILE FIRST
+    @include flex(space-between, center);
+
+    .name {
+        @include flex(space-between, center, row, nowrap);
+
+        span {
+            font-size: .75em;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 0 5px;
+        }
+    }
+
+    nav ul {
+        @include flex(space-between, center, row, nowrap);
+        list-style-type: none;
+        margin: 0;
+    }
+}
