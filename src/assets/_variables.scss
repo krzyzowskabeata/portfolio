@@ -1,9 +1,9 @@
 @mixin flex($justify, $align, $direction: row, $wrap: wrap) {
     display: flex;
-    flex-direction: $direction;
-    flex-wrap: $wrap;
     justify-content: $justify;
     align-items: $align;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
 }
 
 @mixin background($imageUrl, $size: cover, $position: center, $repeat: no-repeat) {

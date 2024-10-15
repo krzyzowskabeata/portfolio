@@ -1,11 +1,25 @@
 @import '../../assets/variables.scss';
 
-.container {   
-    @include background(url('../../assets/pic-theme.JPG'));
+section {
     width: 100vw;
-    height: calc(100vh - 64px); //ToDo ?!
+    
+    
+    .container {   
+        @include flex(center, center);
+        @include background(url('../../assets/pic-theme.JPG')); // ToDo Add fallback background color
+        height: calc(100vh - 64px); //ToDo Should I remove heder height?
+        color: #fff; // ToDo NOT WHITE
+        font-size: 1.2rem;
 
-    @include xl {
-        width: 50vw;
+        
+        blockquote {
+            @include flex(center, flex-end, column);
+        }
+
+        @include md {
+            background-size: contain;
+            background-position: right;
+        }
     }
+
 }
