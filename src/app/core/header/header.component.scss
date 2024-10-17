@@ -1,4 +1,4 @@
-@import '../../../assets/variables';
+@import '../../../assets/mixins';
 
 header mat-toolbar { // ToDo MOBILE FIRST
     @include flex(space-between, center);

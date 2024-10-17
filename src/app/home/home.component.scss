@@ -1,21 +1,24 @@
-@import '../../assets/variables.scss';
+@import '../../assets/variables';
+@import '../../assets/mixins';
 
 section {
     width: 100vw;
     
-    
     .container {   
-        @include flex(center, center);
+        @include flex(center, flex-start);
         @include background(url('../../assets/pic-theme.JPG')); // ToDo Add fallback background color
         height: calc(100vh - 64px); //ToDo Should I remove heder height?
-        color: #fff; // ToDo NOT WHITE
-        font-size: 1.2rem;
-
+        
         
         blockquote {
             @include flex(center, flex-end, column);
+            color: $primary30;
+            font-size: 1.2rem;
+            background-color: #ffffff99;
+            border-radius: $radius;
+            padding: 1rem;
         }
-
+        
         @include md {
             background-size: contain;
             background-position: right;
