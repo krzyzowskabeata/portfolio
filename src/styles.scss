@@ -5,7 +5,11 @@
 @use './assets/m3-theme.scss';
 
 @include mat.core();
-
 html, body { height: 100%; }
 html { @include mat.all-component-themes(m3-theme.$light-theme); }
+
+@media (prefers-color-scheme: dark) {
+    html { @include mat.all-component-colors(m3-theme.$dark-theme); }
+}
+
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
