@@ -6,16 +6,20 @@
             </a>
             <span>{{ name }}</span>
         </div>
-        <nav>
-            <ul>
-                <li>
-                    <!-- ToDo Link to future html ids-->
-                    <a mat-button>{{ navItem1 }}</a>
-                </li>
-                <li>
-                    <a mat-button>{{ navItem2 }}</a>
-                </li>
-            </ul>
-        </nav>
+        <div class="info">
+            <nav>
+                <ul>
+                    <li>
+                        <!-- ToDo Link to future html ids-->
+                        <a mat-button>{{ navItem1 }}</a>
+                    </li>
+                    <li>
+                        <a mat-button>{{ navItem2 }}</a>
+                    </li>
+                </ul>
+            </nav>
+            <mat-divider vertical></mat-divider>
+            <pf-toggle-theme></pf-toggle-theme>
+        </div>
     </mat-toolbar>
 </header>

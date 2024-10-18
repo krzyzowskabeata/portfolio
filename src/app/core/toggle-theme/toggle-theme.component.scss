@@ -1,0 +1,19 @@
+.toggle {
+    position: relative;
+    margin: 15px;
+
+    .dark-mode-icon, .light-mode-icon {
+        // ToDo: CHANGE COLOR (maybe based on active mode?)
+        position: absolute;
+        top: 8px;
+        font-size: 16px;
+    }
+
+    .dark-mode-icon {
+        left: 8px;
+    }
+
+    .light-mode-icon {
+        right: 4px
+    }
+}
