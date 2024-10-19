@@ -1,4 +1,4 @@
-<mat-slide-toggle class="toggle" hideIcon="true" [checked]="isChecked">
+<mat-slide-toggle class="toggle" hideIcon="true" [checked]="isChecked$ | async" (change)="onChange($event)">
     <mat-icon class="dark-mode-icon">dark_mode</mat-icon>
     <mat-icon class="light-mode-icon">light_mode</mat-icon>
 </mat-slide-toggle>

@@ -1,16 +1,28 @@
-import { Component, Input } from '@angular/core';
+import { AsyncPipe } from '@angular/common';
+import { Component, inject } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { map } from 'rxjs';
+import { Theme } from './theme';
+import { ToggleThemeService } from './toggle-theme.service';
 
 @Component({
   selector: 'pf-toggle-theme',
   standalone: true,
-  imports: [MatIconModule, MatSlideToggleModule],
+  imports: [AsyncPipe, MatIconModule, MatSlideToggleModule],
   templateUrl: './toggle-theme.component.html',
   styleUrl: './toggle-theme.component.scss'
 })
 export class ToggleThemeComponent {
 
-  @Input() isChecked?: boolean;
+  private toggleThemeService = inject(ToggleThemeService);
 
+  isChecked$ = this.toggleThemeService.theme$
+    .pipe(
+      map(theme => theme === Theme.Light)
+    );
+
+    onChange({ checked: isChecked }: { checked: boolean }): void {
+      this.toggleThemeService.setSelectedTheme(isChecked ? Theme.Light : Theme.Dark);
+    }
 }
