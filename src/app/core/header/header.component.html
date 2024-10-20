@@ -1,7 +1,7 @@
 <header>
     <mat-toolbar>
         <div class="name">
-            <a mat-icon-button [routerLink]="['/welcome']" aria-label="Home icon">
+            <a mat-icon-button [routerLink]="['/welcome']" i18n-aria-label aria-label="Home icon">
                 <mat-icon>handshake</mat-icon>
             </a>
             <span>{{ name }}</span>
@@ -11,10 +11,10 @@
                 <ul>
                     <li>
                         <!-- ToDo Link to future html ids-->
-                        <a mat-button>{{ navItem1 }}</a>
+                        <a mat-button i18n>About</a>
                     </li>
                     <li>
-                        <a mat-button>{{ navItem2 }}</a>
+                        <a mat-button i18n>Contact</a>
                     </li>
                 </ul>
             </nav>

@@ -17,7 +17,5 @@ import { ToggleThemeComponent } from '../toggle-theme/toggle-theme.component';
 export class HeaderComponent {
 
   name = 'Dominik Dobry';
-  navItem1 = "About";
-  navItem2 = "Contact";
 
 }
