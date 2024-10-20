@@ -1,5 +1,5 @@
 import { AsyncPipe } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { map } from 'rxjs';
@@ -11,7 +11,8 @@ import { ToggleThemeService } from './toggle-theme.service';
   standalone: true,
   imports: [AsyncPipe, MatIconModule, MatSlideToggleModule],
   templateUrl: './toggle-theme.component.html',
-  styleUrl: './toggle-theme.component.scss'
+  styleUrl: './toggle-theme.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ToggleThemeComponent {
 
