@@ -1,0 +1,18 @@
+.toggle {
+    position: relative;
+    margin: 15px;
+
+    .dark-mode-icon, .light-mode-icon {
+        position: absolute;
+        top: 9px;
+        font-size: 14px;
+    }
+
+    .dark-mode-icon {
+        left: 9px;
+    }
+
+    .light-mode-icon {
+        right: 3px
+    }
+}
