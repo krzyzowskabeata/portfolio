@@ -1,0 +1,3 @@
+<mat-button-toggle-group class="toggle-language" name="language" i18n-aria-label aria-label="Toggle language" hideSingleSelectionIndicator="true" [value]="selectedLanguageCode" (change)="onChange($event)">
+    <mat-button-toggle class="toggle-button" *ngFor="let lang of languages" [value]="lang.code">{{ lang.label }}</mat-button-toggle>
+</mat-button-toggle-group>

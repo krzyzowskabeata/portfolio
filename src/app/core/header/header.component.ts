@@ -5,12 +5,13 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { RouterLink } from '@angular/router';
 import { ToggleThemeComponent } from '../toggle-theme/toggle-theme.component';
+import { ToggleLanguageComponent } from '../toggle-language/toggle-language.component';
 
 
 @Component({
   selector: 'pf-header',
   standalone: true,
-  imports: [MatDividerModule, MatIconModule, MatButtonModule, MatToolbarModule, RouterLink, ToggleThemeComponent],
+  imports: [MatDividerModule, MatIconModule, MatButtonModule, MatToolbarModule, RouterLink, ToggleLanguageComponent, ToggleThemeComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
