@@ -1,17 +1,11 @@
 import { Component } from '@angular/core';
-import { MatIconModule } from '@angular/material/icon';
-import { MatCardModule } from '@angular/material/card';
+import { QuoteComponent } from './quote/quote.component';
 
 @Component({
   selector: 'pf-home',
   standalone: true,
-  imports: [MatCardModule, MatIconModule],
+  imports: [QuoteComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
-export class HomeComponent {
-
-  quote = 'A year spent in artificial intelligence is enough to make one believe in God.';
-  author = 'Alan Perlis';
-
-}
+export class HomeComponent { }
