@@ -14,9 +14,19 @@ header mat-toolbar { // ToDo MOBILE FIRST
         }
     }
 
-    nav ul {
-        @include flex(space-between, center, row, nowrap);
-        list-style-type: none;
-        margin: 0;
+    .info {
+        @include flex(flex-end, center);
+        height: 100%;
+
+        nav ul {
+            @include flex(space-between, center, row, nowrap);
+            list-style-type: none;
+            margin: 0 5px;
+        }
+
+        mat-divider {
+            height: 50%;
+            opacity: .5;
+        }
     }
 }
