@@ -1,16 +1,21 @@
 <section>
     <div class="container">
-        <blockquote>
-            <p>
-                <sup>
-                    <mat-icon aria-hidden="true" aria-label="Quote icon" fontIcon="format_quote"></mat-icon>
-                </sup>
-                &nbsp;{{ quote }}&nbsp;
-                <sup>
-                    <mat-icon aria-hidden="true" aria-label="Quote icon" fontIcon="format_quote"></mat-icon>
-                </sup>
-            </p>
-            <footer>{{ author }}</footer>
-        </blockquote>
+        <mat-card appearance="outlined">
+            <mat-card-content class="blockquote-card">
+                <blockquote>
+                    <p>
+                        <sup>
+                            <mat-icon aria-hidden="true" aria-label="Quote icon" fontIcon="format_quote"></mat-icon>
+                        </sup>
+                        &nbsp;{{ quote }}&nbsp;
+                        <sup>
+                            <mat-icon aria-hidden="true" aria-label="Quote icon" fontIcon="format_quote"></mat-icon>
+                        </sup>
+                    </p>
+                    <footer>{{ author }}</footer>
+                </blockquote>
+            </mat-card-content>
+          </mat-card>
+          <mat-card appearance="outlined" class="blockquote-image"></mat-card>
     </div>
 </section>

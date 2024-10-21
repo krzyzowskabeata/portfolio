@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
   selector: 'pf-home',
   standalone: true,
-  imports: [MatIconModule],
+  imports: [MatCardModule, MatIconModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

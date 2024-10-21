@@ -5,24 +5,27 @@ section {
     width: 100vw;
     
     .container {   
-        @include flex(center, flex-start);
-        @include background(url('../../assets/pic-theme.JPG')); // ToDo Add fallback background color
+        @include flex(center, center);
+        @include background(url('../../assets/background.png')); // ToDo Add fallback background color
         height: calc(100vh - 64px); //ToDo Should I remove heder height?
-        
-        
-        blockquote {
-            @include flex(center, flex-end, column);
-            color: $primary30;
-            font-size: 1.2rem;
+
+        mat-card {
             background-color: #ffffff99;
-            border-radius: $radius;
-            padding: 1rem;
+
+            blockquote {
+                @include flex(center, flex-end, column);
+                padding: 0 1.5rem .5rem 0;
+            }
         }
         
-        @include md {
-            background-size: contain;
-            background-position: right;
+
+        .blockquote-image {
+            @include background(url('../../assets/ai-face.png'));
+            height: 11rem;
+            width: 11rem;
+            border-radius: 50%;
+            z-index: 1;
+            margin: -3rem;
         }
     }
-
 }
