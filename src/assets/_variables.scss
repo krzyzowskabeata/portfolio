@@ -1,7 +1,10 @@
-@mixin flex($justify, $align, $direction: row, $wrap: wrap) {
-    display: flex;
-    flex-direction: $direction;
-    flex-wrap: $wrap;
-    justify-content: $justify;
-    align-items: $align;
-}
+@use 'sass:map';
+@import './m3-theme.scss'; // ToDo IS IT OK?
+
+
+$radius: 8px;
+
+$primary30: map.get( 
+    map.get($_palettes, primary), 
+    30
+);

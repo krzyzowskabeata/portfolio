@@ -1,0 +1,12 @@
+@import '../../assets/mixins';
+
+.home-background {
+    @include background(url('../../assets/background.png')); // ToDo Add fallback background color
+    height: calc(100vh - 64px); //ToDo Should I remove heder height?
+
+    .home-container {
+        @include flex(center, center);
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
