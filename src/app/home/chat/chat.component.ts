@@ -2,14 +2,15 @@ import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { MatChipsModule } from '@angular/material/chips';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
-import { MatTooltipModule}  from '@angular/material/tooltip';
+import { TooltipDirective } from '../../shared/tooltip.directive';
 
 @Component({
   selector: 'pf-chat',
   standalone: true,
-  imports: [NgFor, MatButtonModule, MatIconModule, MatCardModule, MatMenuModule, MatTooltipModule],
+  imports: [NgFor, MatButtonModule, MatCardModule, MatChipsModule, MatIconModule, MatMenuModule, TooltipDirective],
   templateUrl: './chat.component.html',
   styleUrl: './chat.component.scss'
 })

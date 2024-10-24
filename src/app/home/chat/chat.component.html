@@ -5,7 +5,7 @@
                 <p *ngFor="let message of messages">{{ message }}</p>
             </mat-card-content>
         </mat-card>
-        <mat-card appearance="outlined" class="chat-image" matTooltip="Eh" matTooltipPosition="above"></mat-card>
+        <mat-card appearance="outlined" class="chat-image" pfTooltip [tooltipTemplate]="imageTooltipTemplate"></mat-card>
     </div>
     <div class="chat-content">
         <button mat-flat-button [matMenuTriggerFor]="chatMenu">Send message</button>
@@ -22,3 +22,15 @@
         </mat-menu>
     </div>
 </section>
+
+<ng-template #imageTooltipTemplate>
+    <div class="tooltip-container">
+        <mat-card appearance="outlined" class="tooltip-card">
+            <mat-card-header>
+                <mat-card-title>Dominik Dobry</mat-card-title>
+                <mat-card-subtitle>Agile coach</mat-card-subtitle>
+            </mat-card-header>
+            <div class="tooltip-image"></div>
+        </mat-card>
+    </div>
+</ng-template>
