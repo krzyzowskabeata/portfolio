@@ -1,0 +1,24 @@
+<section class="chat-container">
+    <div class="chat-content">
+        <mat-card appearance="outlined" class="chat-card">
+            <mat-card-content>
+                <p *ngFor="let message of messages">{{ message }}</p>
+            </mat-card-content>
+        </mat-card>
+        <mat-card appearance="outlined" class="chat-image" matTooltip="Eh" matTooltipPosition="above"></mat-card>
+    </div>
+    <div class="chat-content">
+        <button mat-flat-button [matMenuTriggerFor]="chatMenu">Send message</button>
+        <!--ToDo Dialog instead of menu-->
+        <mat-menu #chatMenu="matMenu">
+            <button mat-menu-item>
+                <mat-icon>mail</mat-icon>
+                <span>Email</span>
+            </button>
+            <button mat-menu-item>
+                <mat-icon>linkedin</mat-icon>
+                <span>LinkedIn</span>
+            </button>
+        </mat-menu>
+    </div>
+</section>
