@@ -8,18 +8,7 @@
         <mat-card appearance="outlined" class="chat-image" pfTooltip [tooltipTemplate]="imageTooltipTemplate"></mat-card>
     </div>
     <div class="chat-content">
-        <button mat-flat-button [matMenuTriggerFor]="chatMenu">Send message</button>
-        <!--ToDo Dialog instead of menu-->
-        <mat-menu #chatMenu="matMenu">
-            <button mat-menu-item>
-                <mat-icon>mail</mat-icon>
-                <span>Email</span>
-            </button>
-            <button mat-menu-item>
-                <mat-icon>linkedin</mat-icon>
-                <span>LinkedIn</span>
-            </button>
-        </mat-menu>
+        <button mat-flat-button pfSubmenu [submenuTemplate]="submenuButtonTemplate">Send message</button>
     </div>
 </section>
 
@@ -28,9 +17,22 @@
         <mat-card appearance="outlined" class="tooltip-card">
             <mat-card-header>
                 <mat-card-title>Dominik Dobry</mat-card-title>
+                <!-- ToDo Title?-->
                 <mat-card-subtitle>Agile coach</mat-card-subtitle>
             </mat-card-header>
             <div class="tooltip-image"></div>
         </mat-card>
+    </div>
+</ng-template>
+
+<ng-template #submenuButtonTemplate>
+    <!--ToDo Add href, styles & big btn styles?-->
+    <div class="submenu-container">
+        <a mat-icon-button>
+            <mat-icon>mail</mat-icon>
+        </a>
+        <a mat-icon-button>
+            <mat-icon>linkedin</mat-icon>
+        </a>
     </div>
 </ng-template>

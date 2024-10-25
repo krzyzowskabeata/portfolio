@@ -1,7 +1,7 @@
 import { ConnectedPosition, Overlay, OverlayPositionBuilder, OverlayRef } from '@angular/cdk/overlay';
 import { ComponentPortal } from '@angular/cdk/portal';
 import { ComponentRef, Directive, ElementRef, HostListener, inject, Input, OnDestroy, OnInit, TemplateRef } from '@angular/core';
-import { TooltipComponent } from './tooltip/tooltip.component';
+import { TooltipComponent } from './tooltip.component';
 
 @Directive({
   selector: '[pfTooltip]',

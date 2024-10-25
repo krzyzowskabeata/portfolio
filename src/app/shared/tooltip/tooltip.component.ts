@@ -5,7 +5,7 @@ import { MatCardModule } from '@angular/material/card';
 @Component({
   selector: 'pf-tooltip',
   standalone: true,
-  imports: [NgIf, MatCardModule, NgTemplateOutlet],
+  imports: [NgIf, NgTemplateOutlet, MatCardModule],
   templateUrl: './tooltip.component.html',
   styleUrl: './tooltip.component.scss'
 })
