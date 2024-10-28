@@ -1,7 +1,7 @@
 import { ConnectedPosition, Overlay, OverlayPositionBuilder, OverlayRef } from '@angular/cdk/overlay';
 import { ComponentPortal } from '@angular/cdk/portal';
 import { ComponentRef, Directive, ElementRef, HostListener, inject, Input, OnDestroy, OnInit, TemplateRef } from '@angular/core';
-import { SubmenuComponent } from './submenu.component';
+import { ContainerComponent } from './container/container.component';
 
 @Directive({
   selector: '[pfSubmenu]',
@@ -24,8 +24,8 @@ export class SubmenuDirective implements OnInit, OnDestroy {
     event.stopPropagation();
     
     if (this.overlayRef && !this.overlayRef.hasAttached()) {
-      const submenuRef: ComponentRef<SubmenuComponent> = this.overlayRef.attach(new ComponentPortal(SubmenuComponent));
-      submenuRef.instance.submenuTemplate = this.submenuTemplate;
+      const submenuRef: ComponentRef<ContainerComponent> = this.overlayRef.attach(new ComponentPortal(ContainerComponent));
+      submenuRef.instance.template = this.submenuTemplate;
     }
   }
 

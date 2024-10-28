@@ -1,7 +1,7 @@
 import { ConnectedPosition, Overlay, OverlayPositionBuilder, OverlayRef } from '@angular/cdk/overlay';
 import { ComponentPortal } from '@angular/cdk/portal';
 import { ComponentRef, Directive, ElementRef, HostListener, inject, Input, OnDestroy, OnInit, TemplateRef } from '@angular/core';
-import { TooltipComponent } from './tooltip.component';
+import { ContainerComponent } from './container/container.component';
 
 @Directive({
   selector: '[pfTooltip]',
@@ -22,8 +22,8 @@ export class TooltipDirective implements OnInit, OnDestroy {
   @HostListener('mouseenter')
   showTooltipTemplate(): void {
     if (this.overlayRef && !this.overlayRef.hasAttached()) {
-      const tooltipRef: ComponentRef<TooltipComponent> = this.overlayRef.attach(new ComponentPortal(TooltipComponent));
-      tooltipRef.instance.tooltipTemplate = this.tooltipTemplate;
+      const tooltipRef: ComponentRef<ContainerComponent> = this.overlayRef.attach(new ComponentPortal(ContainerComponent));
+      tooltipRef.instance.template = this.tooltipTemplate;
     }
   }
 

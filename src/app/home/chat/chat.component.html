@@ -5,7 +5,7 @@
                 <p *ngFor="let message of messages">{{ message }}</p>
             </mat-card-content>
         </mat-card>
-        <mat-card appearance="outlined" class="chat-image" pfTooltip [tooltipTemplate]="imageTooltipTemplate"></mat-card>
+        <mat-card appearance="outlined" class="chat-image" pfTooltip [tooltipTemplate]="imageTooltipTemplate" pfSubmenu [submenuTemplate]="imageTooltipTemplate"></mat-card>
     </div>
     <div class="chat-content">
         <button mat-flat-button pfSubmenu [submenuTemplate]="submenuButtonTemplate">Send message</button>
