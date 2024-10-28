@@ -11,7 +11,7 @@ export class TooltipDirective implements OnInit, OnDestroy {
 
   @Input() tooltipTemplate?: TemplateRef<any>;
   @Input() showTooltip = true;
-  @Input() positions: ConnectedPosition[] = [{ originX: 'end', originY: 'top', overlayX: 'start', overlayY: 'bottom', offsetY: 5 }];
+  @Input() positions: ConnectedPosition[] = [{ originX: 'end', originY: 'top', overlayX: 'start', overlayY: 'bottom', offsetX: 0, offsetY: 5 }];
 
   private overlayRef?: OverlayRef;
 
