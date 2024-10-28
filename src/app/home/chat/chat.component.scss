@@ -59,5 +59,11 @@ section.chat-container {
             top: 25px;
             left: -15px;
         }
+
+        .icon {
+            @include background(url('../../../assets/linkedin-pic.png'), contain);
+            height: 36px;
+            width: 36px;
+        }
     }
 }

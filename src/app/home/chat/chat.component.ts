@@ -23,4 +23,10 @@ export class ChatComponent {
   It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of 
   Letraset sheets containing Lorem Ipsum passages.`];
 
+  title ="Dominik Dobry";
+  subtitle ="Scrum Master";
+
+  email = 'gsr.ddobry@gmail.com';
+  linkedin = 'https://www.linkedin.com/in/dominik-dobry/';
+
 }

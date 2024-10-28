@@ -16,9 +16,8 @@
     <div class="tooltip-container">
         <mat-card appearance="outlined" class="tooltip-card">
             <mat-card-header>
-                <mat-card-title>Dominik Dobry</mat-card-title>
-                <!-- ToDo Title?-->
-                <mat-card-subtitle>Agile coach</mat-card-subtitle>
+                <mat-card-title>{{ title }}</mat-card-title>
+                <mat-card-subtitle>{{ subtitle }}</mat-card-subtitle>
             </mat-card-header>
             <div class="tooltip-image"></div>
         </mat-card>
@@ -26,13 +25,12 @@
 </ng-template>
 
 <ng-template #submenuButtonTemplate>
-    <!--ToDo Add href, styles & big btn styles?-->
     <div class="submenu-container">
-        <a mat-mini-fab class="submenu-item">
+        <a mat-mini-fab class="submenu-item" [href]="'mailto:' + email">
             <mat-icon>mail</mat-icon>
         </a>
-        <a mat-mini-fab class="submenu-item">
-            <mat-icon>linkedin</mat-icon>
+        <a mat-mini-fab class="submenu-item" [href]="linkedin" target="_blank">
+            <div class="icon"></div>
         </a>
     </div>
 </ng-template>
