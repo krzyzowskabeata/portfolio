@@ -1,0 +1,25 @@
+@import '../../../assets/mixins';
+
+::ng-deep .chat-dialog .mat-mdc-dialog-surface {
+    background-color: transparent;
+}
+
+.dialog-container .dialog-content {
+    padding: 0; 
+
+    .dialog-card {
+        background-color: #ffffffd9;
+            
+        .card-header .image {
+            @include background(url('../../../assets/pf-pic.jpg'));
+        }
+    
+        .card-footer {
+            padding: 1.2rem 1rem 1rem 1rem;
+            
+            a:focus {
+                outline: none;
+            }
+        }
+    }
+}

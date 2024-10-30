@@ -1,44 +1,13 @@
 <section class="chat-container">
     <div class="chat-content">
-        <mat-card appearance="outlined" class="chat-card">
-            <mat-card-content>
-                <p *ngFor="let message of messages">{{ message }}</p>
-            </mat-card-content>
-        </mat-card>
-        <mat-card appearance="outlined" class="chat-image" pfTooltip [tooltipTemplate]="imageTooltipTemplate" pfSubmenu [submenuTemplate]="imageTooltipTemplate"></mat-card>
-    </div>
-    <div class="chat-content">
-        <button mat-flat-button pfSubmenu [submenuTemplate]="submenuButtonTemplate">Send message</button>
+        @if (opened()) { 
+            <button mat-icon-button aria-label="Close dialog" (click)="closeDialog()">
+                <mat-icon>cancel</mat-icon>
+            </button>
+        } @else { 
+            <button mat-icon-button aria-label="Open dialog" (click)="openDialog()">
+                <div class="chat-image"></div>
+            </button>
+        }
     </div>
 </section>
-
-<ng-template #imageTooltipTemplate>
-    <div class="tooltip-container">
-        <mat-card appearance="outlined" class="tooltip-card">
-            <mat-card-header>
-                <mat-card-title>{{ title }}</mat-card-title>
-                <mat-card-subtitle>{{ subtitle }}</mat-card-subtitle>
-            </mat-card-header>
-            <div mat-card-image class="tooltip-image"></div>
-            <mat-card-actions>
-                <button mat-icon-button>
-                    <mat-icon>mail</mat-icon>
-                </button>
-                <button mat-icon-button>
-                    <div class="linkedin-icon"></div>
-                </button>
-              </mat-card-actions>
-        </mat-card>
-    </div>
-</ng-template>
-
-<ng-template #submenuButtonTemplate>
-    <div class="submenu-container">
-        <a mat-mini-fab class="submenu-item" [href]="'mailto:' + email">
-            <mat-icon>mail</mat-icon>
-        </a>
-        <a mat-mini-fab class="submenu-item" [href]="linkedin" target="_blank">
-            <div class="linkedin-icon"></div>
-        </a>
-    </div>
-</ng-template>
