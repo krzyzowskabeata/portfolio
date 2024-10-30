@@ -16,6 +16,16 @@
     
         .card-footer {
             padding: 1.2rem 1rem 1rem 1rem;
+
+            .chip-icon {
+                &.about-me {
+                    @include background(url('../../../assets/pf-pic.jpg'));
+                }
+
+                &.linkedin {
+                    @include background(url('../../../assets/linkedin-pic.png'));
+                }
+            }
             
             a:focus {
                 outline: none;

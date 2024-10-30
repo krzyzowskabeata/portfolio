@@ -1,4 +1,3 @@
-import { NgIf } from '@angular/common';
 import { afterNextRender, ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { DialogPosition, MatDialog, MatDialogRef } from '@angular/material/dialog';
@@ -10,7 +9,7 @@ import { ChatDialogComponent } from '../chat-dialog/chat-dialog.component';
 @Component({
   selector: 'pf-chat',
   standalone: true,
-  imports: [NgIf, MatButtonModule, MatIconModule],
+  imports: [MatButtonModule, MatIconModule],
   templateUrl: './chat.component.html',
   styleUrl: './chat.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
@@ -39,7 +38,7 @@ export class ChatComponent {
 
   initDialog(): void {
     of(EMPTY)
-      .pipe(delay(2000))
+      .pipe(delay(1000))
       .subscribe(() => this.openDialog());
   }
 
