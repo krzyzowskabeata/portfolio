@@ -1,0 +1,26 @@
+@import '../../../assets/mixins';
+
+section.chat-container .chat-content {
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    z-index: 2000;
+
+    button {
+        &:has(.chat-image) {
+            height: 5rem;
+            width: 5rem;
+        }
+
+        .chat-image {
+            @include background(url('../../../assets/pf-pic.jpg'));
+            height: 4rem;
+            width: 4rem;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
