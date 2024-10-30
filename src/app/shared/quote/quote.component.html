@@ -1,0 +1,16 @@
+<div class="quote-container">
+    <blockquote class="quote-content">
+        <p>
+            <sup>
+                <mat-icon aria-label="Quote icon" fontIcon="format_quote"></mat-icon>
+            </sup>
+            {{ quote }}
+            <sup>
+                <mat-icon aria-label="Quote icon" fontIcon="format_quote"></mat-icon>
+            </sup>
+        </p>
+        @if (author) { 
+        <footer>{{ author }}</footer>
+        }
+    </blockquote>
+</div>

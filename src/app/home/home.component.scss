@@ -8,5 +8,9 @@
         @include flex(center, center);
         max-width: 1200px;
         margin: 0 auto;
+
+        pf-quote {
+            margin: 6rem 2rem;
+        }
     }
 }

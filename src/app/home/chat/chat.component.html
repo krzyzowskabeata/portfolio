@@ -1,13 +1,13 @@
 <section class="chat-container">
     <div class="chat-content">
         @if (opened()) { 
-            <button mat-icon-button aria-label="Close dialog" (click)="closeDialog()">
-                <mat-icon>cancel</mat-icon>
-            </button>
+        <button mat-icon-button aria-label="Close dialog" (click)="closeDialog()">
+            <mat-icon>cancel</mat-icon>
+        </button>
         } @else { 
-            <button mat-icon-button aria-label="Open dialog" (click)="openDialog()">
-                <div class="chat-image"></div>
-            </button>
+        <button mat-icon-button aria-label="Open dialog" (click)="openDialog()">
+            <div class="chat-image"></div>
+        </button>
         }
     </div>
 </section>

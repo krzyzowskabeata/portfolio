@@ -1,4 +1,4 @@
-import { NgIf, NgTemplateOutlet } from '@angular/common';
+import { NgTemplateOutlet } from '@angular/common';
 import { Component, Input, TemplateRef } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -13,7 +13,7 @@ const modules = [
 @Component({
   selector: 'pf-container',
   standalone: true,
-  imports: [NgIf, NgTemplateOutlet, ...modules],
+  imports: [NgTemplateOutlet, ...modules],
   templateUrl: './container.component.html',
   styleUrl: './container.component.scss'
 })

@@ -13,6 +13,12 @@
     background-repeat: $repeat;
 }
 
+@mixin space-mono-regular {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
 @mixin sm {
     @media (min-width: 576px) {
         @content;
