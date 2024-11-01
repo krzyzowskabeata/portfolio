@@ -1,33 +1,42 @@
 @import '../../../assets/variables';
 @import '../../../assets/mixins';
 
-header mat-toolbar { // ToDo MOBILE FIRST
-    @include flex(space-between, center);
+// ToDo MOBILE FIRST FOR WHOLE APP
+.header-container {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
 
-    .name {
-        @include flex(space-between, center, row, nowrap);
-
-        span {
-            font-size: .75em;
-            font-weight: 700;
-            text-transform: uppercase;
-            padding: 0 5px;
-        }
-    }
-
-    .info {
-        @include flex(flex-end, center);
-        height: 100%;
-
-        nav ul {
+    .header-content { 
+        @include flex(space-between, center);
+    
+        .name {
             @include flex(space-between, center, row, nowrap);
-            list-style-type: none;
-            margin: 0 5px;
+    
+            span {
+                font-size: .75em;
+                font-weight: 700;
+                text-transform: uppercase;
+                padding: 0 5px;
+            }
         }
-
-        mat-divider {
-            height: 50%;
-            opacity: .5;
+    
+        .info {
+            @include flex(flex-end, center);
+            height: 100%;
+    
+            nav ul {
+                @include flex(space-between, center, row, nowrap);
+                list-style-type: none;
+                margin: 0 5px;
+            }
+    
+            mat-divider {
+                height: 50%;
+                opacity: .5;
+            }
         }
     }
 }
