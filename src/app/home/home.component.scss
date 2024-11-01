@@ -1,16 +1,25 @@
 @import '../../assets/mixins';
+@import '../../assets/variables';
+
+.home-container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .home-content {
+        @include flex(center, center);
+
+        pf-quote {
+            margin: 8.5rem 2rem;
+        }
+    }
+}
 
 .home-background {
     @include background(url('../../assets/background.png')); // ToDo Add fallback background color
-    height: calc(100vh - 64px); //ToDo Should I remove heder height?
-
-    .home-container {
-        @include flex(center, center);
-        max-width: 1200px;
-        margin: 0 auto;
-
-        pf-quote {
-            margin: 6rem 2rem;
-        }
-    }
+    height: calc(100% - $header-height);
+    width: 100%;
+    position: fixed;
+    top: $header-height;
+    left: 0;
+    z-index: -1;
 }
