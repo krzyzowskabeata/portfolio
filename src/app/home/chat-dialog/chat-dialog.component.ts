@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, Signal } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatChipsModule } from '@angular/material/chips';
@@ -16,6 +16,6 @@ import { ChatDialog } from '../chat-dialog';
 })
 export class ChatDialogComponent {
 
-  readonly data = inject<ChatDialog>(MAT_DIALOG_DATA);
+  readonly data = inject<Signal<ChatDialog | undefined>>(MAT_DIALOG_DATA);
 
 }
