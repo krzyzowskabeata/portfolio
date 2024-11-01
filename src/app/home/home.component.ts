@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { QuoteComponent } from '../shared/quote/quote.component';
+import { AboutMeComponent } from './about-me/about-me.component';
 import { ChatComponent } from './chat/chat.component';
 
 @Component({
   selector: 'pf-home',
   standalone: true,
-  imports: [ChatComponent, QuoteComponent],
+  imports: [AboutMeComponent, ChatComponent, QuoteComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
