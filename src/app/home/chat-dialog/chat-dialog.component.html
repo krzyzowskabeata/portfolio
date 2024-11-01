@@ -1,38 +1,40 @@
 <div class="dialog-container">
     <mat-dialog-content class="dialog-content">
         <mat-card appearance="outlined" class="dialog-card">
+          @if (data(); as data) {
             <mat-card-header class="card-header">
-                <div mat-card-avatar class="image"></div>
-                <mat-card-title>{{ data.title }}</mat-card-title>
-                <mat-card-subtitle>{{ data.subtitle }}</mat-card-subtitle>
-            </mat-card-header>
-            <mat-card-content class="card-content">
-                <p>{{ data.message }}</p>
-            </mat-card-content>
-            <mat-card-footer class="card-footer">
-                <mat-chip-set aria-label="Skills">
-                  <mat-chip>
-                    <div matChipAvatar class="chip-icon about-me"></div>
-                    about me
-                </mat-chip>
-                  <mat-chip>
-                    <mat-icon matChipAvatar>recommend</mat-icon>
-                    recommendations
-                </mat-chip>
-                  <a [href]="'mailto:' + data.email">
-                      <mat-chip>
-                          <mat-icon matChipAvatar>mail</mat-icon>
-                          email
-                        </mat-chip>
-                  </a>
-                  <a [href]="data.linkedin" target="_blank">
-                      <mat-chip>
-                          <div matChipAvatar class="chip-icon linkedin"></div>
-                          linkedin
-                        </mat-chip>
-                  </a>
-                </mat-chip-set>
-              </mat-card-footer>
+              <div mat-card-avatar class="image"></div>
+              <mat-card-title>{{ data.title }}</mat-card-title>
+              <mat-card-subtitle>{{ data.subtitle }}</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content class="card-content">
+              <p>{{ data.message }}</p>
+          </mat-card-content>
+          <mat-card-footer class="card-footer">
+              <mat-chip-set aria-label="Skills">
+                <mat-chip>
+                  <div matChipAvatar class="chip-icon about-me"></div>
+                  about me
+              </mat-chip>
+                <mat-chip>
+                  <mat-icon matChipAvatar>recommend</mat-icon>
+                  recommendations
+              </mat-chip>
+                <a [href]="'mailto:' + data.email">
+                    <mat-chip>
+                        <mat-icon matChipAvatar>mail</mat-icon>
+                        email
+                      </mat-chip>
+                </a>
+                <a [href]="data.linkedin" target="_blank">
+                    <mat-chip>
+                        <div matChipAvatar class="chip-icon linkedin"></div>
+                        linkedin
+                      </mat-chip>
+                </a>
+              </mat-chip-set>
+          </mat-card-footer>
+          }
         </mat-card>
     </mat-dialog-content>
 </div>
