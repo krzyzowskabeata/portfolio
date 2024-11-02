@@ -6,10 +6,11 @@
     margin: 0 auto;
 
     .home-content {
-        @include flex(center, center);
+        @include flex(center, center, column);
 
-        pf-quote {
-            margin: 8.5rem 2rem;
+        .quote-container {
+            height: 100vh;
+            padding-top: 8.5rem;
         }
     }
 }

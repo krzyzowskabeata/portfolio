@@ -1,25 +1,44 @@
 <header class="header-container">
     <mat-toolbar class="header-content">
+        @if (chatDialog(); as data) {
         <div class="name">
             <a mat-icon-button [routerLink]="['/welcome']" aria-label="Home icon">
                 <mat-icon>handshake</mat-icon>
             </a>
-            <span>{{ name }}</span>
+            <span>{{ data.title }}</span>
         </div>
-        <div class="info">
-            <nav>
-                <ul>
-                    <li>
-                        <!-- ToDo Link to future html ids-->
-                        <a mat-button>{{ navItem1 }}</a>
-                    </li>
-                    <li>
-                        <a mat-button>{{ navItem2 }}</a>
-                    </li>
-                </ul>
-            </nav>
-            <mat-divider vertical></mat-divider>
-            <pf-toggle-theme></pf-toggle-theme>
-        </div>
+            <div class="info">
+                <nav>
+                    <button mat-icon-button [matMenuTriggerFor]="menu">
+                        <mat-icon>menu</mat-icon>
+                    </button>
+                    <mat-menu #menu="matMenu">
+                        <button mat-menu-item (click)="scrollTo(elementToScroll.ABOUT_ME)">
+                            <mat-icon>
+                                <div class="icon about-me"></div>
+                            </mat-icon>
+                            <span>About me</span>
+                        </button>
+                        <button mat-menu-item (click)="scrollTo(elementToScroll.RECOMMENDATIONS)">
+                            <mat-icon>recommend</mat-icon>
+                            <span>Recommendations</span>
+                        </button>
+                        <mat-divider class="menu-divider"></mat-divider>
+                        <a mat-menu-item [href]="'mailto:' + data.email" target="_blank">
+                            <mat-icon>mail</mat-icon>
+                            <span>Email</span>
+                        </a>
+                        <a mat-menu-item [href]="data.linkedin" target="_blank">
+                            <mat-icon>
+                                <div class="icon linkedin"></div>
+                            </mat-icon>
+                            <span>LinkedIn</span>
+                        </a>
+                    </mat-menu>
+                </nav>
+                <mat-divider vertical></mat-divider>
+                <pf-toggle-theme></pf-toggle-theme>
+            </div>
+        }
     </mat-toolbar>
 </header>

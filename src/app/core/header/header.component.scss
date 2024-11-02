@@ -1,19 +1,19 @@
 @import '../../../assets/variables';
 @import '../../../assets/mixins';
 
-// ToDo MOBILE FIRST FOR WHOLE APP
+// ToDo MOBILE FIRST FOR WHOLE APP AND BETTER STYLES!
 .header-container {
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 2000;
-
+    
     .header-content { 
         @include flex(space-between, center);
     
         .name {
             @include flex(space-between, center, row, nowrap);
+            padding: 0 5px;
     
             span {
                 font-size: .75em;
@@ -27,9 +27,7 @@
             @include flex(flex-end, center);
             height: 100%;
     
-            nav ul {
-                @include flex(space-between, center, row, nowrap);
-                list-style-type: none;
+            nav {
                 margin: 0 5px;
             }
     
@@ -39,4 +37,24 @@
             }
         }
     }
+}
+
+.icon {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+
+    &.about-me {
+        @include background(url('../../../assets/pf-pic.jpg'));
+    }
+
+    &.linkedin {
+        @include background(url('../../../assets/linkedin-pic.png'));
+    }
+}
+
+.menu-divider {
+    width: 90%;
+    opacity: .3;
+    margin: 0 auto;
 }
