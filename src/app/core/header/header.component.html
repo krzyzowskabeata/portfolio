@@ -13,13 +13,13 @@
                         <mat-icon>menu</mat-icon>
                     </button>
                     <mat-menu #menu="matMenu">
-                        <button mat-menu-item>
+                        <button mat-menu-item (click)="scrollTo(elementToScroll.ABOUT_ME)">
                             <mat-icon>
                                 <div class="icon about-me"></div>
                             </mat-icon>
                             <span>About me</span>
                         </button>
-                        <button mat-menu-item>
+                        <button mat-menu-item (click)="scrollTo(elementToScroll.RECOMMENDATIONS)">
                             <mat-icon>recommend</mat-icon>
                             <span>Recommendations</span>
                         </button>

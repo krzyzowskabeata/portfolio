@@ -1,8 +1,9 @@
-import { afterNextRender, ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
+import { afterNextRender, ChangeDetectionStrategy, Component, EventEmitter, inject, Output, signal } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { delay, EMPTY, of } from 'rxjs';
+import { ElementToScroll } from '../../core/element-to-scroll';
 import { ChatDialogComponent } from '../chat-dialog/chat-dialog.component';
 import { ChatService } from '../chat.service';
 
@@ -15,11 +16,12 @@ import { ChatService } from '../chat.service';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ChatComponent {
+
+  @Output() scrollToEvent = new EventEmitter<ElementToScroll>();
   
   private chatService = inject(ChatService);
   readonly dialog = inject(MatDialog);
 
-  readonly chatDialog = this.chatService.chatDialog;
   readonly opened = signal(false);
   
   private dialogRef?: MatDialogRef<ChatDialogComponent, any>;
@@ -37,9 +39,12 @@ export class ChatComponent {
   openDialog(): void {
     this.opened.set(true);
 
-    this.dialogRef = this.dialog.open(ChatDialogComponent, { data: this.chatDialog });
+    this.dialogRef = this.dialog.open(ChatDialogComponent, { data: this.chatService.chatDialog });
     this.dialogRef.updatePosition({ bottom: '5rem', right: '5rem' });
-    this.dialogRef.afterClosed().subscribe(() => this.opened.set(false));
+    this.dialogRef.afterClosed().subscribe(scrollableElement => {
+      this.opened.set(false);
+      this.scrollToEvent.emit(scrollableElement);
+    });
   }
 
   closeDialog(): void {
