@@ -1,11 +1,11 @@
 <header class="header-container">
     <mat-toolbar class="header-content">
-        @if (chatDialog(); as data) {
+        @if (profile(); as profile) {
         <div class="name">
             <a mat-icon-button [routerLink]="['/welcome']" aria-label="Home icon">
                 <mat-icon>handshake</mat-icon>
             </a>
-            <span>{{ data.title }}</span>
+            <span>{{ profile.title }}</span>
         </div>
             <div class="info">
                 <nav>
@@ -24,11 +24,11 @@
                             <span>Recommendations</span>
                         </button>
                         <mat-divider class="menu-divider"></mat-divider>
-                        <a mat-menu-item [href]="'mailto:' + data.email" target="_blank">
+                        <a mat-menu-item [href]="'mailto:' + profile.email" target="_blank">
                             <mat-icon>mail</mat-icon>
                             <span>Email</span>
                         </a>
-                        <a mat-menu-item [href]="data.linkedin" target="_blank">
+                        <a mat-menu-item [href]="profile.linkedin" target="_blank">
                             <mat-icon>
                                 <div class="icon linkedin"></div>
                             </mat-icon>

@@ -1,1 +1,35 @@
-<p>about-me works!</p>
+<div class="about-me-container">
+  @if (profileDetails && profileDetails(); as details) {
+  <mat-card class="about-me-content">
+    <mat-card-header>
+      <mat-card-title-group>
+        <mat-card-title>{{ details.title }}</mat-card-title>
+        <mat-card-subtitle>{{ details.subtitle }}</mat-card-subtitle>
+      </mat-card-title-group>
+      <div mat-card-xl-image class="image"></div>
+    </mat-card-header>
+    <mat-card-content>{{ details.aboutMe}}</mat-card-content>
+    <!--ToDo-->
+    <!-- <mat-accordion>
+      <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title> Education </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      </mat-expansion-panel>
+      <mat-expansion-panel hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title> Gantt </mat-panel-title>
+          </mat-expansion-panel-header>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </mat-expansion-panel>
+        <mat-expansion-panel hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title> Friss </mat-panel-title>
+          </mat-expansion-panel-header>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </mat-expansion-panel>
+    </mat-accordion> -->
+  </mat-card>
+  }
+</div>

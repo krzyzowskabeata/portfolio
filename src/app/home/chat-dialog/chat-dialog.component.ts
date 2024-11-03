@@ -4,7 +4,7 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatDialogModule, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { ElementToScroll } from '../../core/element-to-scroll';
-import { ChatDialog } from '../chat-dialog';
+import { Profile } from '../profile';
 
 @Component({
   selector: 'pf-chat-dialog',
@@ -16,7 +16,7 @@ import { ChatDialog } from '../chat-dialog';
 })
 export class ChatDialogComponent {
 
-  readonly data = inject<Signal<ChatDialog | undefined>>(MAT_DIALOG_DATA);
+  readonly data = inject<Signal<Profile | undefined>>(MAT_DIALOG_DATA);
   readonly elementToScroll = ElementToScroll; // ToDo As data?
 
 }

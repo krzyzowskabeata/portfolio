@@ -1,11 +1,13 @@
 import { InMemoryDbService } from 'angular-in-memory-web-api';
-import { ChatDialog } from './home/chat-dialog';
-import { ChatDialogData } from './home/chat-dialog-data';
+import { Profile } from './home/profile';
+import { ProfileData } from './home/profile-data';
+import { ProfileDetails } from './home/profile-details';
 
 export class AppData implements InMemoryDbService {
 
-    createDb(): { chatDialog: ChatDialog} {
-        const chatDialog = ChatDialogData.chatDialog;
-        return { chatDialog };
+    createDb(): { profile: Profile, profileDetails: ProfileDetails } {
+        const profile = ProfileData.profile;
+        const profileDetails = ProfileData.profileDetails;
+        return { profile, profileDetails };
     }
 }

@@ -1,0 +1,42 @@
+@import '../../../assets/mixins';
+
+.about-me-container {
+    padding: 1rem;
+
+    .about-me-content {
+        background-color: #ffffffb3;
+        border-radius: 4px; // ToDo
+        box-shadow: none;
+        margin: 0 3rem;
+
+        mat-card-header {
+            flex-direction: row-reverse;
+
+            mat-card-title-group {
+                padding-left: 1rem;
+            }
+
+            .image {
+                @include background(url('../../../assets/pf-pic-square.jpg'));
+                border-radius: 4px; // ToDo
+            }
+        }
+
+        mat-card-content {
+            padding-top: 1rem;
+        }
+
+        mat-accordion {
+            padding: 1rem 0;
+            mat-card-content {
+                padding-top: 1rem;
+            }
+    
+            mat-expansion-panel {
+                background-color: transparent;
+                border-radius: 0;
+                box-shadow: none;
+            }
+        }
+    }
+}

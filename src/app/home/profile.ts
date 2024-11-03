@@ -1,4 +1,4 @@
-export interface ChatDialog {
+export interface Profile {
     title: string;
     subtitle: string;
     message: string;

@@ -7,6 +7,7 @@ import { ScrollerService } from '../core/scroller.service';
 import { QuoteComponent } from '../shared/quote/quote.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { ChatComponent } from './chat/chat.component';
+import { ProfileService } from './profile.service';
 
 @Component({
   selector: 'pf-home',
@@ -19,6 +20,10 @@ export class HomeComponent implements OnInit{
 
   private scroller = inject(ViewportScroller);
   private scrollerService = inject(ScrollerService);
+
+  private profileService = inject(ProfileService);
+  profile = this.profileService.profile;
+  profileDetails = this.profileService.profileDetails;
 
   private selectedElement$ = toObservable(this.scrollerService.selectedElement);
   elementToScroll = ElementToScroll;
