@@ -1,34 +1,38 @@
 import { ViewportScroller } from '@angular/common';
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { toObservable } from '@angular/core/rxjs-interop';
 import { filter } from 'rxjs';
 import { ElementToScroll } from '../core/element-to-scroll';
 import { ScrollerService } from '../core/scroller.service';
-import { QuoteComponent } from '../shared/quote/quote.component';
-import { AboutMeComponent } from './about-me/about-me.component';
-import { ChatComponent } from './chat/chat.component';
 import { ProfileService } from './profile.service';
+import { AboutMeComponent } from '../shared/about-me/about-me.component';
+import { ChatComponent } from '../shared/chat/chat.component';
+import { QuoteComponent } from '../shared/quote/quote.component';
+import { RecommendationsComponent } from '../shared/recommendations/recommendations.component';
 
 @Component({
-  selector: 'pf-home',
+  selector: 'pf-profile',
   standalone: true,
-  imports: [AboutMeComponent, ChatComponent, QuoteComponent],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+  imports: [AboutMeComponent, ChatComponent, QuoteComponent, RecommendationsComponent],
+  templateUrl: './profile.component.html',
+  styleUrl: './profile.component.scss'
 })
-export class HomeComponent implements OnInit{
+export class ProfileComponent {
 
-  private scroller = inject(ViewportScroller);
+  private scroller = inject(ViewportScroller); // ToDo Can I delegate it to service?
   private scrollerService = inject(ScrollerService);
 
   private profileService = inject(ProfileService);
   profile = this.profileService.profile;
-  profileDetails = this.profileService.profileDetails;
+  aboutMe = this.profileService.aboutMe;
+  recommendations = this.profileService.recommendations;
+  recommendationTypes = this.profileService.recommendationTypes;
 
   private selectedElement$ = toObservable(this.scrollerService.selectedElement);
   elementToScroll = ElementToScroll;
 
-  quote = 'We must become the change we want to see';
+  // ToDo Get from service
+  quote = 'We must become the change we want to see'; 
   author = 'Mahatma Gandhi';
 
   ngOnInit(): void {
@@ -40,5 +44,5 @@ export class HomeComponent implements OnInit{
   scrollTo(selectedElement: ElementToScroll): void {
     this.scrollerService.setElement(selectedElement);
   }
-  
+
 }

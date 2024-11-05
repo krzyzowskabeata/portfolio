@@ -8,7 +8,7 @@ import { RouterLink } from '@angular/router';
 import { ToggleThemeComponent } from '../toggle-theme/toggle-theme.component';
 import { ScrollerService } from '../scroller.service';
 import { ElementToScroll } from '../element-to-scroll';
-import { ProfileService } from '../../home/profile.service';
+import { ProfileService } from '../../profile/profile.service';
 
 @Component({
   selector: 'pf-header',

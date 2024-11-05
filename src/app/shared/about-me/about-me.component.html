@@ -1,15 +1,15 @@
 <div class="about-me-container">
-  @if (profileDetails && profileDetails(); as details) {
+  @if (aboutMe && aboutMe(); as aboutMe) {
   <mat-card class="about-me-content">
     <mat-card-header>
       <mat-card-title-group>
-        <mat-card-title>{{ details.title }}</mat-card-title>
-        <mat-card-subtitle>{{ details.subtitle }}</mat-card-subtitle>
+        <mat-card-title>{{ aboutMe.title }}</mat-card-title>
+        <mat-card-subtitle>{{ aboutMe.subtitle }}</mat-card-subtitle>
       </mat-card-title-group>
       <div mat-card-xl-image class="image"></div>
     </mat-card-header>
-    <mat-card-content>{{ details.aboutMe}}</mat-card-content>
-    <!--ToDo-->
+    <mat-card-content>{{ aboutMe.aboutMe}}</mat-card-content>
+    <!--ToDo Adjust-->
     <!-- <mat-accordion>
       <mat-expansion-panel hideToggle>
         <mat-expansion-panel-header>

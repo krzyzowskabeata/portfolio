@@ -4,8 +4,8 @@ import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { delay, EMPTY, of } from 'rxjs';
 import { ElementToScroll } from '../../core/element-to-scroll';
-import { ChatDialogComponent } from '../chat-dialog/chat-dialog.component';
-import { Profile } from '../profile';
+import { ChatDialogComponent } from './chat-dialog/chat-dialog.component';
+import { Profile } from '../../profile/profile';
 
 @Component({
   selector: 'pf-chat',
@@ -22,7 +22,7 @@ export class ChatComponent {
   
   readonly dialog = inject(MatDialog);
   readonly opened = signal(false);
-  private dialogRef?: MatDialogRef<ChatDialogComponent, any>;
+  private dialogRef?: MatDialogRef<ChatDialogComponent, any>; // ToDo TYPE
 
   constructor() {
     afterNextRender(() => this.initDialog());

@@ -11,5 +11,5 @@ import { MatExpansionModule } from '@angular/material/expansion';
 })
 export class AboutMeComponent {
 
-  @Input({ required: true }) profileDetails?: Signal<any | undefined>; // ToDo Add type
+  @Input({ required: true }) aboutMe?: Signal<any | undefined>; // ToDo Merged types
 }

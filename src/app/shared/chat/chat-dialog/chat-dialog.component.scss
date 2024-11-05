@@ -1,4 +1,4 @@
-@import '../../../assets/mixins';
+@import '../../../../assets/mixins';
 
 ::ng-deep .chat-dialog .mat-mdc-dialog-surface {
     background-color: transparent;
@@ -11,7 +11,7 @@
         background-color: #ffffffd9;
             
         .card-header .image {
-            @include background(url('../../../assets/pf-pic.jpg'));
+            @include background(url('../../../../assets/pf-pic.jpg'));
         }
     
         .card-footer {
@@ -19,11 +19,11 @@
 
             .chip-icon {
                 &.about-me {
-                    @include background(url('../../../assets/pf-pic.jpg'));
+                    @include background(url('../../../../assets/pf-pic.jpg'));
                 }
 
                 &.linkedin {
-                    @include background(url('../../../assets/linkedin-pic.png'));
+                    @include background(url('../../../../assets/linkedin-pic.png'));
                 }
             }
             

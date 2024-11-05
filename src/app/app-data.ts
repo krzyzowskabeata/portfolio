@@ -1,13 +1,15 @@
 import { InMemoryDbService } from 'angular-in-memory-web-api';
-import { Profile } from './home/profile';
-import { ProfileData } from './home/profile-data';
-import { ProfileDetails } from './home/profile-details';
+import { Profile } from './profile/profile';
+import { ProfileData } from './profile/profile-data';
+import { AboutMe } from './shared/about-me/about-me';
+import { Recommendation } from './shared/recommendations/recommendation';
 
 export class AppData implements InMemoryDbService {
 
-    createDb(): { profile: Profile, profileDetails: ProfileDetails } {
+    createDb(): { profile: Profile, aboutMe: AboutMe, recommendations: Recommendation[] } {
         const profile = ProfileData.profile;
-        const profileDetails = ProfileData.profileDetails;
-        return { profile, profileDetails };
+        const aboutMe = ProfileData.aboutMe;
+        const recommendations = ProfileData.recommendations;
+        return { profile, aboutMe, recommendations };
     }
 }

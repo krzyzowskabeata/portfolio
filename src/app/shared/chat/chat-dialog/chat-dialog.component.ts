@@ -3,8 +3,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatDialogModule, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
-import { ElementToScroll } from '../../core/element-to-scroll';
-import { Profile } from '../profile';
+import { ElementToScroll } from '../../../core/element-to-scroll';
+import { Profile } from '../../../profile/profile';
 
 @Component({
   selector: 'pf-chat-dialog',
