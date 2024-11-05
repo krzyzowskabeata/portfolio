@@ -1,0 +1,27 @@
+<div class="recommendations-container">
+  @if (recommendationTypes && recommendations && recommendations(); as recommendations) {
+  <mat-card class="recommendations-content">
+    @for (type of recommendationTypes(); track type) {
+    <ng-container>
+      <mat-card-header>
+        <mat-card-title-group>
+          <mat-card-title>{{ type }}</mat-card-title>
+        </mat-card-title-group>
+      </mat-card-header>
+      <mat-card-content>
+            <ul>
+                @for (item of recommendations; track item.id) {
+                  @if (type === item.type) {
+                  <li>
+                      <p>{{ item.title }}</p>
+                      <p>{{ item.author }}</p>
+                  </li>
+                  } 
+                }
+          </ul>
+      </mat-card-content>
+    </ng-container>
+    }
+  </mat-card>
+  }
+</div>

@@ -6,9 +6,9 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { RouterLink } from '@angular/router';
 import { ToggleThemeComponent } from '../toggle-theme/toggle-theme.component';
-import { ChatService } from '../../home/chat.service';
 import { ScrollerService } from '../scroller.service';
 import { ElementToScroll } from '../element-to-scroll';
+import { ProfileService } from '../../profile/profile.service';
 
 @Component({
   selector: 'pf-header',
@@ -21,8 +21,8 @@ import { ElementToScroll } from '../element-to-scroll';
 export class HeaderComponent {
 
   // ToDo Should it be in app component?
-  private chatService = inject(ChatService);
-  readonly chatDialog = this.chatService.chatDialog;
+  private profileService = inject(ProfileService);
+  readonly profile = this.profileService.profile;
 
   private scrollerService = inject(ScrollerService);
   elementToScroll = ElementToScroll;
