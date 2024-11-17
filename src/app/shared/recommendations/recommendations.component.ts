@@ -1,5 +1,4 @@
 import { Component, Input, Signal } from '@angular/core';
-import { toObservable } from '@angular/core/rxjs-interop';
 import { MatCardModule } from '@angular/material/card';
 import { Recommendation } from './recommendation';
 import { RecommendationType } from './recommendation-type';
