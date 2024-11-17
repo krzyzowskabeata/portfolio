@@ -1,6 +1,8 @@
 import { Component, Input, Signal } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { Profile } from '../../profile/profile';
+import { AboutMe } from './about-me';
 
 @Component({
   selector: 'pf-about-me',
@@ -11,5 +13,5 @@ import { MatExpansionModule } from '@angular/material/expansion';
 })
 export class AboutMeComponent {
 
-  @Input({ required: true }) aboutMe?: Signal<any | undefined>; // ToDo Merged types
+  @Input({ required: true }) aboutMe?: Signal<Pick<Profile, 'title' | 'subtitle'> & AboutMe | undefined>;
 }

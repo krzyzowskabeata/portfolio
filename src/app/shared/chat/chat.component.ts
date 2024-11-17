@@ -22,7 +22,7 @@ export class ChatComponent {
   
   readonly dialog = inject(MatDialog);
   readonly opened = signal(false);
-  private dialogRef?: MatDialogRef<ChatDialogComponent, any>; // ToDo TYPE
+  private dialogRef?: MatDialogRef<ChatDialogComponent, ElementToScroll>;
 
   constructor() {
     afterNextRender(() => this.initDialog());
