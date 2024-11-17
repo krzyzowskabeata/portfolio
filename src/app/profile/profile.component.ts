@@ -27,13 +27,10 @@ export class ProfileComponent {
   aboutMe = this.profileService.aboutMe;
   recommendations = this.profileService.recommendations;
   recommendationTypes = this.profileService.recommendationTypes;
+  quote = this.profileService.quote;
 
   private selectedElement$ = toObservable(this.scrollerService.selectedElement);
   elementToScroll = ElementToScroll;
-
-  // ToDo Get from service
-  quote = 'We must become the change we want to see'; 
-  author = 'Mahatma Gandhi';
 
   ngOnInit(): void {
     this.selectedElement$

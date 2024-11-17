@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Signal } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
+import { Quote } from './quote';
 
 @Component({
   selector: 'pf-quote',
@@ -10,7 +11,6 @@ import { MatIconModule } from '@angular/material/icon';
 })
 export class QuoteComponent {
 
-  @Input({ required: true }) quote?: string;
-  @Input() author?: string;
+  @Input({ required: true }) quote?: Signal<Quote | undefined>;
 
 }

@@ -1,4 +1,4 @@
-export interface Profile { // ToDo Where to keep?
+export interface Profile {
     title: string;
     subtitle: string;
     message: string;
