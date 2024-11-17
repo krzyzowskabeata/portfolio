@@ -1,21 +1,25 @@
 @import '../../../assets/mixins';
 
 .footer-container {
+    position: relative;
     padding-top: 6rem;
 
     .footer-content {
         @include flex(flex-end, center);
-        background-color: #ffffff1a;
+        opacity: .1;
+    }
 
-        .copyright {
-            @include space-mono-regular;
-            @include flex(flex-end, center);
-            font-size: .8rem;
-            margin: 0 19px;
+    .copyright {
+        @include space-mono-regular;
+        @include flex(flex-end, center);
+        position: absolute;
+        bottom: 19px;
+        right: 21px;
+        font-size: .8rem;
+        margin: 0;
 
-            .icon {
-                transform: scale(.6);
-            }
+        .icon {
+            transform: scale(.6);
         }
     }
 }

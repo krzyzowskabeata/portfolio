@@ -2,6 +2,7 @@ import { Profile } from "./profile";
 import { RecommendationType } from "../shared/recommendations/recommendation-type";
 import { Recommendation } from "../shared/recommendations/recommendation";
 import { AboutMe } from "../shared/about-me/about-me";
+import { Quote } from "../shared/quote/quote";
 
 export class ProfileData {
 
@@ -43,5 +44,10 @@ export class ProfileData {
             type: RecommendationType.PODCASTS
         }
     ];
+
+    static quote: Quote = {
+        author: 'Mahatma Gandhi',
+        content: 'We must become the change we want to see'
+    };
 
 }

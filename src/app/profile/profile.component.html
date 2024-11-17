@@ -2,7 +2,7 @@
     <div class="home-content">
         <pf-chat [profile]="profile" (scrollToEvent)="scrollTo($event)"></pf-chat>
         <div class="quote-container">
-            <pf-quote [quote]="quote" [author]="author"></pf-quote>
+            <pf-quote [quote]="quote"></pf-quote>
         </div>
         <pf-about-me [id]="elementToScroll.ABOUT_ME" [aboutMe]="aboutMe"></pf-about-me>
         <pf-recommendations [id]="elementToScroll.RECOMMENDATIONS" [recommendations]="recommendations" [recommendationTypes]="recommendationTypes"></pf-recommendations>
