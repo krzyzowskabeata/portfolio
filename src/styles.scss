@@ -10,7 +10,7 @@ html, body { height: 100%; }
 html { 
     @include mat.all-component-themes(m3-theme.$light-theme);
 
-    #theme-dark {
+    #theme-dark, pf-root:has(main#theme-dark) ~ .cdk-overlay-container {
         @include mat.all-component-colors(m3-theme.$dark-theme);
     }
 }
