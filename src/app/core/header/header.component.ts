@@ -20,7 +20,6 @@ import { ProfileService } from '../../profile/profile.service';
 })
 export class HeaderComponent {
 
-  // ToDo Should it be in app component?
   private profileService = inject(ProfileService);
   readonly profile = this.profileService.profile;
 
@@ -28,7 +27,7 @@ export class HeaderComponent {
   elementToScroll = ElementToScroll;
 
   scrollTo(selectedElement: ElementToScroll): void {
-    this.scrollerService.setElement(selectedElement);
+    this.scrollerService.scrollToElement(selectedElement);
   }
 
 }
