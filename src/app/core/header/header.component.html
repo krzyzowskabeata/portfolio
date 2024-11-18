@@ -2,7 +2,7 @@
     <mat-toolbar class="header-content">
         @if (profile(); as profile) {
         <div class="name">
-            <a mat-icon-button [routerLink]="['/welcome']" aria-label="Home icon">
+            <a mat-icon-button [routerLink]="['/welcome']" aria-label="Profile icon">
                 <mat-icon>handshake</mat-icon>
             </a>
             <span>{{ profile.title }}</span>

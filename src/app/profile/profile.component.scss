@@ -1,11 +1,11 @@
 @import '../../assets/mixins';
 @import '../../assets/variables';
 
-.home-container {
+.profile-container {
     max-width: 1200px;
     margin: 0 auto;
 
-    .home-content {
+    .profile-content {
         @include flex(center, center, column);
 
         .quote-container {
@@ -19,7 +19,7 @@
     }
 }
 
-.home-background {
+.profile-background {
     @include background(url('../../assets/background.png')); // ToDo Add fallback background color
     height: calc(100% - $header-height);
     width: 100%;
