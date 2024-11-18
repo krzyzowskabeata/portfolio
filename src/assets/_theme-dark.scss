@@ -4,7 +4,13 @@
         color: #ebe1d7; //ToDo
     }
 
-    .home-background {
-        background-image: url('../assets/dark-background.png');
+    .home-background::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #4f2f008c;
     }
 }
