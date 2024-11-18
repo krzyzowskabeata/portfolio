@@ -8,8 +8,6 @@
     padding: 0; 
 
     .dialog-card {
-        background-color: #ffffffd9;
-            
         .card-header .image {
             @include background(url('../../../../assets/pf-pic.jpg'));
         }
