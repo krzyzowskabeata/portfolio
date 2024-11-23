@@ -4,6 +4,57 @@
     padding: 6rem 1rem 0 1rem;
 
     .recommendations-content {
-        @include mat-card-styles;
+        margin: 0 3rem;
+        
+        .recommendations-list {
+            list-style-type: none;
+            padding: 0;
+            
+            li a {
+                text-decoration: none;
+                
+                .recommendations-card {
+                    @include mat-card-styles; 
+                    margin: 0 0 1rem 0;
+    
+                    .recommendations-card-content {
+                        @include flex(flex-start, flex-start);
+                        
+                        img {
+                            border-radius: 4px; // ToDo
+                            transform: scale(.8);
+                        }
+                        
+                        .info {
+                            color: #1f1b15; // ToDo
+                            padding: 1.5rem 0;
+
+                            .title {
+                                font-size: 1.5rem;;
+                            }
+
+                            .author {
+                                font-size: 1.2rem;;
+                            }
+                        }
+
+                    }
+
+                    &::after {
+                        content: "";
+                        width: 100%;
+                        height: 100%;
+                        background-color: transparent;
+                        border-radius: 4px;
+                        @include transition-ease-in-out;
+                    }
+
+                    &:hover::after {
+                        background-color: #0000001a;
+                        @include transition-ease-in-out;
+                    }
+                }
+            }
+        }
     }
 }
