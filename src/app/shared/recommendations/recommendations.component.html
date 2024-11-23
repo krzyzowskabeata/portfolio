@@ -13,8 +13,13 @@
                 @for (item of recommendations; track item.id) {
                   @if (type === item.type) {
                   <li>
-                      <p>{{ item.title }}</p>
-                      <p>{{ item.author }}</p>
+                    <a [href]="item.link">
+                      <img [alt]="item.title" [src]="item.img"/>
+                      <p>
+                        <span>{{ item.title }}</span>
+                        <span>{{ item.author }}</span>
+                      </p>
+                    </a>
                   </li>
                   } 
                 }
