@@ -1,3 +1,5 @@
+@import './variables';
+
 @mixin flex($justify, $align, $direction: row, $wrap: wrap) {
     display: flex;
     justify-content: $justify;
@@ -21,7 +23,7 @@
 
 @mixin mat-card-styles {
     background-color: #ffffffb3;
-    border-radius: 4px;
+    border-radius: $border-radius;
     box-shadow: none;
     margin: 0 3rem;
 }

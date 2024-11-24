@@ -15,7 +15,7 @@
 
             .image {
                 @include background(url('../../../assets/pf-pic-square.jpg'));
-                border-radius: 4px; // ToDo
+                border-radius: $border-radius;
             }
         }
 
