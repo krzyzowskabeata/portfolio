@@ -1,6 +1,9 @@
 #theme-dark {
     mat-card, footer mat-toolbar {
         background-color: #0000001a;
+    }
+
+    mat-card-title, mat-card {
         color: #ebe1d7; //ToDo
     }
 

@@ -27,22 +27,44 @@ export class ProfileData {
     static recommendations: Recommendation[] = [
         {
             id: 1,
-            author: 'Lorem Ipsum',
-            title: `Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`,
+            author: `Richard Bach`,
+            title: `Mewa`,
+            img: `https://s.lubimyczytac.pl/upload/books/5102000/5102436/1126486-170x243.jpg`,
+            link: `https://lubimyczytac.pl/ksiazka/5102436/mewa`,
             type: RecommendationType.BOOKS
         },
         {
             id: 2,
-            author: 'Lorem Ipsum',
-            title: `Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`,
+            author: `Daniel H. Pink`,
+            title: `DRIVE. Kompletnie nowe spojrzenie na motywację`,
+            img: `https://s.lubimyczytac.pl/upload/books/116000/116364/170x243.jpg`,
+            link: `https://lubimyczytac.pl/ksiazka/116364/drive-kompletnie-nowe-spojrzenie-na-motywacje`,
             type: RecommendationType.BOOKS
         },
         {
             id: 3,
-            author: 'Lorem Ipsum',
-            title: `Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`,
+            author: `James Clear`,
+            title: `Atomowe nawyki. Drobne zmiany, niezwykłe efekty`,
+            img: `https://s.lubimyczytac.pl/upload/books/4898000/4898707/1067270-170x243.jpg`,
+            link: `https://lubimyczytac.pl/ksiazka/4898707/atomowe-nawyki-drobne-zmiany-niezwykle-efekty`,
+            type: RecommendationType.BOOKS
+        },
+        {
+            id: 4,
+            author: `@przemekgorczykpodcast`,
+            title: `Przemek Górczyk Podcast`,
+            img: `https://yt3.googleusercontent.com/SLseQhs5hC3L0TRDLJBuUgDjLw9Rk4WFAecwwvvgYkBi8me8e0OFZpKNX5EMS705EYzS0o_y0uY=s160-c-k-c0x00ffffff-no-rj`,
+            link: `https://www.youtube.com/@przemekgorczykpodcast`,
             type: RecommendationType.PODCASTS
-        }
+        },
+        {
+            id: 5,
+            author: `@menedzerplus`,
+            title: `Podcast Menedżer Plus | Mariusz Chrapko`,
+            img: `https://yt3.googleusercontent.com/EI5PSL3TsFJBt-dw94dxxVFla_yGWCt0ypn4pFJNcAPa3LSZga0niSJ9-HczeCEVD4r7n4Em=s160-c-k-c0x00ffffff-no-rj`,
+            link: `https://www.youtube.com/@menedzerplus`,
+            type: RecommendationType.PODCASTS
+        },
     ];
 
     static quote: Quote = {
