@@ -1,0 +1,88 @@
+@import '../../../assets/mixins';
+
+$image-border-color: #c9c9c9;
+
+.gallup-container .gallup-content {
+    @include mat-card-styles;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    margin: 0;
+
+    .header {
+        padding: 1rem;
+
+        .image {
+            @include flex(flex-start, center);
+            column-gap: 1rem;
+            margin: 0 1rem;
+
+            .strength-box {
+                @include flex(space-between, center);
+                position: relative;
+                height: 30px;
+                width: 50px;
+                border: .5px solid $image-border-color;
+                border-right: none;
+                border-left: none;
+                margin: 0 1rem;
+
+                .strength-box-pipe {
+                    @include transition-ease-in-out;
+                    width: .5px;
+                    height: 100%;
+                    background-color: $image-border-color;
+                    margin: 0 2px;
+
+                    &.active {
+                        @include transition-ease-in-out;
+                        width: 3px;
+                        margin: 0 1px;
+                    }
+                }
+
+                .strength-box-corner {
+                    height: 21px;
+                    width: 21px;
+                    border: .5px solid $image-border-color;
+                    position: absolute;
+                    left: -11px;
+                    top: 4px;
+                    transform: rotate(45deg);
+                    
+                    &.left {
+                        border-top: none;
+                        border-right: none;
+                    }
+
+                    &.right {
+                        left: 39px;
+                        border-left: none;
+                        border-bottom: none;
+                    }
+                }
+            }
+        }
+    }
+
+    &.accordion .panel {
+        @include mat-expansion-panel-styles;
+
+        &:not(.mat-expanded) {
+            .panel-header {
+                position: relative;
+        
+                .strength-indicator-header {
+                    @include mat-expansion-panel-indicator;
+                }               
+            }
+        }
+
+        &.mat-expanded {
+            position: relative;
+        
+            .strength-indicator {
+                @include mat-expansion-panel-indicator;
+            }               
+        }
+    }
+}

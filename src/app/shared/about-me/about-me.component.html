@@ -1,35 +1,23 @@
 <div class="about-me-container">
   @if (aboutMe && aboutMe(); as aboutMe) {
-  <mat-card class="about-me-content">
-    <mat-card-header>
-      <mat-card-title-group>
-        <mat-card-title>{{ aboutMe.title }}</mat-card-title>
-        <mat-card-subtitle>{{ aboutMe.subtitle }}</mat-card-subtitle>
-      </mat-card-title-group>
-      <div mat-card-xl-image class="image"></div>
-    </mat-card-header>
-    <mat-card-content>{{ aboutMe.details }}</mat-card-content>
-    <!--ToDo Adjust-->
-    <!-- <mat-accordion>
-      <mat-expansion-panel hideToggle>
-        <mat-expansion-panel-header>
-          <mat-panel-title> Education </mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-      </mat-expansion-panel>
-      <mat-expansion-panel hideToggle>
-          <mat-expansion-panel-header>
-            <mat-panel-title> Gantt </mat-panel-title>
-          </mat-expansion-panel-header>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-        </mat-expansion-panel>
-        <mat-expansion-panel hideToggle>
-          <mat-expansion-panel-header>
-            <mat-panel-title> Friss </mat-panel-title>
-          </mat-expansion-panel-header>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-        </mat-expansion-panel>
-    </mat-accordion> -->
-  </mat-card>
+  <div class="about-me-content">
+
+    <mat-card class="details-content">
+      <mat-card-header class="header">
+        <mat-card-title-group class="title-group">
+          <mat-card-title>{{ aboutMe.title }}</mat-card-title>
+          <mat-card-subtitle>{{ aboutMe.subtitle }}</mat-card-subtitle>
+        </mat-card-title-group>
+        <div mat-card-xl-image class="image"></div>
+      </mat-card-header>
+      <mat-card-content>{{ aboutMe.details }}</mat-card-content>
+    </mat-card>
+
+    <div class="additional-details-content">
+      <pf-fris [fris]="aboutMe.fris"></pf-fris>
+      <pf-gallup [gallup]="aboutMe.gallup"></pf-gallup>
+    </div>
+    
+  </div>
   }
 </div>

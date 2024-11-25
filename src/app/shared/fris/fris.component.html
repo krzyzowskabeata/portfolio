@@ -1,0 +1,18 @@
+<div class="fris-container">
+    @if (fris) {
+    <mat-card class="fris-content">
+        <mat-card-header class="header">
+            <mat-card-title-group>
+                <mat-card-title>{{ title }} 
+                    <sup>&reg;</sup>
+                </mat-card-title>
+                <mat-card-subtitle>{{ fris.thinkingStyle }}{{ subtitle }} {{ fris.actionStyle.toLowerCase() }}</mat-card-subtitle>
+                <div class="images">
+                    <div class="image" [ngClass]="fris.thinkingStyle.toLowerCase()"></div>
+                    <div class="image" [ngClass]="fris.actionStyle.toLowerCase()"></div>
+                </div>
+            </mat-card-title-group>
+        </mat-card-header>
+    </mat-card>
+    }
+</div>

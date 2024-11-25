@@ -1,39 +1,35 @@
 @import '../../../assets/mixins';
 
 .about-me-container {
+    min-height: calc(100vh - 2 * $header-height);
     padding: 6rem 1rem 0 1rem;
-
-    .about-me-content {
-        @include mat-card-styles;
-
-        mat-card-header {
-            flex-direction: row-reverse;
-
-            mat-card-title-group {
-                padding-left: 1rem;
-            }
-
-            .image {
-                @include background(url('../../../assets/pf-pic-square.jpg'));
-                border-radius: $border-radius;
-            }
-        }
-
-        mat-card-content {
-            padding-top: 1rem;
-        }
-
-        mat-accordion {
-            padding: 1rem 0;
-            mat-card-content {
-                padding-top: 1rem;
-            }
     
-            mat-expansion-panel {
-                background-color: transparent;
-                border-radius: 0;
-                box-shadow: none;
+    .about-me-content {
+        @include flex(flex-start, flex-start);
+
+        .details-content {
+            @include mat-card-styles;
+            width: calc(60% - 4rem);
+            margin-right: 1rem;
+    
+            .header {
+                flex-direction: row-reverse;
+                padding-bottom: 1rem;;
+    
+                .title-group {
+                    padding-left: 1rem;
+                }
+    
+                .image {
+                    @include background(url('../../../assets/pf-pic-square.jpg'));
+                    border-radius: $border-radius;
+                }
             }
+        }
+
+        .additional-details-content {
+            width: calc(40% - 3rem);
+            min-height: 100%;
         }
     }
 }
