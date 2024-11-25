@@ -20,8 +20,40 @@ export class ProfileData {
         details: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
         It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. orem Ipsum is simply dummy text of the printing and typesetting industry. 
-        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.`
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
+        gallup: [
+            {
+                strength: `Naprawianie`,
+                color: `#792481`,
+                description: `Osoby, które wyróżnia cecha Naprawiania, dobrze radzą sobie z problemami. Są skuteczne w Znajdowaniu odpowiedzi na pytanieo to, co nie działa i jak to naprawić.`
+            },
+            {
+                strength: `Dowodzenie`,
+                color: `#e67402`,
+                description: `Osoby, które wyróżnia cecha Dowodzenia, są zauważalne i wywierają wpływ na innych. Potrafią przejąć kontrolę nad sytuacją i podejmować decyzje.`
+            },
+            {
+                strength: `Elastyczność`,
+                color: `#026ec5`,
+                description: `Osoby, które wyróżnia cecha Elastyczności, wolą „płynąć z prądem". Mają tendencje do bycia „ludźmi dnia dzisiejszego", którzy biorą rzeczy takimi, jakie są i przyszłość odkrywają dzień po dniu.`
+            },
+            {
+                strength: `Odkrywczość`,
+                color: `#02915c`,
+                description: `Osoby, które wyróżnia cecha Odkrywczości, są zafascynowane pomystami i ideami. Potrafią odnaleźć związki pomiędzy zjawiskami, które z pozoru są catkowicie różne.`
+            },
+            {
+                strength: `Poważanie`,
+                color: `#d86d03`,
+                description: `Osoby, które wyróżnia cecha Poważania, chcą, aby inni ludzie traktowali je z wielkim szacunkiem. Są niezależne i chcą być rozpoznawane.`
+            }
+        ],
+        fris: {
+            thinkingStyle: `Wizjoner`,
+            actionStyle: `Gracz`,
+            thinkingStyleColor: `#efa92d`,
+            thinkingStyleShape: `circle`
+        }
     };
 
     static recommendations: Recommendation[] = [
@@ -64,12 +96,12 @@ export class ProfileData {
             img: `https://yt3.googleusercontent.com/EI5PSL3TsFJBt-dw94dxxVFla_yGWCt0ypn4pFJNcAPa3LSZga0niSJ9-HczeCEVD4r7n4Em=s160-c-k-c0x00ffffff-no-rj`,
             link: `https://www.youtube.com/@menedzerplus`,
             type: RecommendationType.PODCASTS
-        },
+        }
     ];
 
     static quote: Quote = {
-        author: 'Mahatma Gandhi',
-        content: 'We must become the change we want to see'
+        author: `Mahatma Gandhi`,
+        content: `We must become the change we want to see`
     };
 
 }

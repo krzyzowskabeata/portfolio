@@ -1,0 +1,29 @@
+@import '../../../assets/mixins';
+
+.fris-container .fris-content {
+    @include mat-card-styles;
+    margin: 0 0 1rem 0;
+
+    .header {
+        padding: 1rem;
+
+        .images {
+            @include flex(flex-start, center);
+            column-gap: 1rem;
+            margin: 0 1rem;
+
+            .image {
+                width: 40px;
+                height: 40px;
+
+                &.wizjoner {
+                    @include background(url('../../../assets/fris-wizjoner.png'));
+                }
+
+                &.gracz {
+                    @include background(url('../../../assets/fris-gracz.png'));
+                }
+            }
+        }
+    }
+}

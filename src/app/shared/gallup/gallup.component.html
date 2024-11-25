@@ -1,0 +1,38 @@
+<div class="gallup-container">
+    @if (gallup) {
+    <mat-card class="gallup-content">
+        <mat-card-header class="header">
+            <mat-card-title-group>
+                <mat-card-title>{{ title }} 
+                    <sup>&reg;</sup>
+                </mat-card-title>
+                <mat-card-subtitle>{{ subtitle }}
+                    <sup>&reg;</sup>
+                </mat-card-subtitle>
+                <div class="image">
+                    <div class="strength-box">
+                        <div class="strength-box-corner left"></div>
+                        @for (item of gallup; track item.strength) {
+                        <div class="strength-box-pipe" [class.active]="!activeColor || item.color == activeColor" [style.backgroundColor]="item.color == (activeColor ?? item.color) ? item.color : ''"></div>
+                        }
+                        <div class="strength-box-corner right"></div>
+                    </div>
+                </div>
+            </mat-card-title-group>
+        </mat-card-header>
+    </mat-card>
+    <mat-accordion class="gallup-content accordion">
+        <mat-expansion-panel disabled></mat-expansion-panel>
+        @for (item of gallup; track item.strength) {
+        <mat-expansion-panel class="panel" (click)="setActiveColor(item.color)">
+            <div class="strength-indicator" [style.backgroundColor]="item.color"></div>
+            <mat-expansion-panel-header class="panel-header">
+                <div class="strength-indicator-header" [style.backgroundColor]="item.color"></div>
+                <mat-panel-title>{{ item.strength }}</mat-panel-title>
+            </mat-expansion-panel-header>
+            <p>{{ item.description }}</p>
+        </mat-expansion-panel>
+        }
+    </mat-accordion>
+    }
+</div>

@@ -28,9 +28,37 @@
     margin: 0 3rem;
 }
 
+@mixin mat-expansion-panel-styles {
+    background-color: #ffffffb3;
+    box-shadow: none;
+
+    &:first-of-type {
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: $border-radius;
+    }
+
+    &:last-of-type {
+        border-bottom-left-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
+    }
+
+    &.mat-expanded {
+        border-radius: $border-radius;
+    }
+}
+
+@mixin mat-expansion-panel-indicator {
+    width: 5px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 @mixin transition-ease-in-out {
-    transition-timing-function: ease-in-out;
-    transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+    transition: background-color .2s ease-in-out,
+                width .2s ease-in-out,
+                margin .2s ease-in-out;
 }
 
 @mixin sm {
