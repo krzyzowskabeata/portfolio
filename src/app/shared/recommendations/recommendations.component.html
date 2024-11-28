@@ -1,29 +1,26 @@
 <div class="recommendations-container">
   @if (recommendationTypes && recommendations && recommendations(); as recommendations) {
-  <mat-tab-group class="recommendations-content">
+  <div class="recommendations-content">
     @for (type of recommendationTypes(); track type) {
-    <mat-tab [label]="type">
-      <ul class="recommendations-list">
+    <div class="recommendations-content-type">
+      <mat-card-subtitle class="type-title">{{ type }}</mat-card-subtitle>
         @for (item of recommendations; track item.id) {
           @if (type === item.type) {
-          <li>
-            <a [href]="item.link" target="_blank">
+            <a class="link" [href]="item.link" target="_blank">
               <mat-card class="recommendations-card">
                 <mat-card-content class="recommendations-card-content">
                   <img [alt]="item.title" [src]="item.img" />
-                  <span class="info">
-                    <mat-card-title>{{ item.title }}</mat-card-title>
-                    <mat-card-subtitle>{{ item.author }}</mat-card-subtitle>
-                  </span>
+                  <div class="info">
+                    <mat-card-title class="title">{{ item.title }}</mat-card-title>
+                    <mat-card-subtitle class="subtitle">{{ item.author }}</mat-card-subtitle>
+                  </div>
                 </mat-card-content>
               </mat-card>
             </a>
-          </li>
-          } 
-        }
-      </ul>
-    </mat-tab>
+            }
+          }
+      </div>
     }
-  </mat-tab-group>
+  </div>
   }
 </div>
